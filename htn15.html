@@ -3,10 +3,40 @@
 </head>
 
 <body>
-	<h1> NESTEA </h1>
-  	{{> introduction}}
+	
+<!------------------------PAGE LAYOUT------------------------>
+	
+	<!--CONTAINER-FLUID-->
+	<div class="container-fluid" id="Intro">
+  		<!--INTRODUCTION DIV-->
+  		<div class="col-md-12">
+  			{{> introduction}}
+  		</div>
+  		
+  		<!--APP PAGE DIV-->
+  		<div class="col-md-12">
+  			
+  			<!--pagination-->
+  			<nav>
+			  <ul class="pager">
+			    <li><a href="#">Previous</a></li>
+			    <li><a href="#">Next</a></li>
+			  </ul>
+			</nav>
+  		</div>
+  		
+  		<!--VERTICAL NAVBAR-->
+  		<div>
+  			
+  		</div>
+	</div>
+
 </body>
 
+
+<!------------------------TEMPLATES------------------------>
+
+<!--LOGIN-->
 <template name="login">
     {{#if currentUser}}
         {{currentUser.services.facebook.name}} -
@@ -17,10 +47,25 @@
     {{/if}}
 </template>
 
+<!--INTRODUCTION TEMPLATE-->
 <template name="introduction">
-	I want to explore
-	<form> 
-		<input type="text" name="user-interests">
-		<input type="submit" name="Go">
-	</form>
+	<div class="col-md-12">
+		<!--input group-->
+		<div class="input-group input-group-lg">
+			<span class="input-group-addon" id="Intro-title">I want to explore </span>
+			<input type="text" class="form-control" name="user-interests">
+			<input type="submit" class="btn btn-default" name="Go">
+		</div>
+	</div>
+	
+</template>
+
+<!--PROFILE DISPLAY TEMPLATE-->
+<template name="profileDisplay">
+	<div class="col-md-6">
+		<!--name-->
+		<!--avatar-->
+		<!--bio-->
+		<!--interests-->
+	</div>
 </template>
