@@ -28,14 +28,23 @@ Template.editProfile.events({
 		var user_id = Meteor.userId();
 		var currProfile = Profiles.findOne({userId: user_id});
 
-		var firstname = $('[name="firstname"]').val();
-		var lastname = $('[name="lastname"]').val();
+		//var firstname = $('[name="firstname"]').val();
+		//var lastname = $('[name="lastname"]').val();
 
+		Meteor.call("updateProfile", 
+			user_id, 
+			$('[name="firstname"]').val(),
+			$('[name="lastname"]').val(),
+			$('[name="zipcode"]').val(),
+			$('[name="bio"]').val()
+			);
+		/*
 		Profiles.update({userId: user_id}, {$set: {
 			firstname: $('[name="firstname"]').val(),
 			lastname: $('[name="lastname"]').val(),
 			zipcode: $('[name="zipcode"]').val(),
 			bio: $('[name="bio"]').val() }
 		});
+*/
 	}
 });
