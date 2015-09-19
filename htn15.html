@@ -14,18 +14,53 @@
    		</div>
   		
   		<!--APP PAGE DIV-->
-  		<div class="col-md-12">
-  			
-  			<!--pagination-->
-  			<nav>
-			  <ul class="pager">
-			    <li><a href="#">Previous</a></li>
-			    <li><a href="#">Next</a></li>
-			  </ul>
-			</nav>
-  		</div>
-  		
-  		<!--VERTICAL NAVBAR-->
+  		<div class="row">
+  			<!--VERTICAL NAVBAR-->
+  			<div class="col-md-2">
+<nav class="navbar navbar-default" role="navigation">
+				  <!-- Brand and toggle get grouped for better mobile display -->
+				  <div class="navbar-header">
+				    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				      <span class="sr-only">Toggle navigation</span>
+				      <span class="icon-bar"></span>
+				      <span class="icon-bar"></span>
+				      <span class="icon-bar"></span>
+				    </button>
+				    <a class="navbar-brand" href="#">Brand</a>
+				  </div>
+				
+				  <!-- Collect the nav links, forms, and other content for toggling -->
+			  <div class="collapse navbar-collapse navbar-ex1-collapse">
+				    <ul class="nav navbar-nav">
+				      <li class="active"><a href="#">Link</a></li>
+				      <li><a href="#">Link</a></li>
+				    </ul>
+				  </div><!-- /.navbar-collapse -->
+				</nav>
+	  		</div>
+  			<!--Profile Section-->
+  			<div class="col-md-10">
+	  			<!--profiles-->
+	  			<div class="row">
+	  				<div class="col-md-5">
+	  					{{>profileDisplay}}
+	  				</div>
+	  				<div class="col-md-5">
+	  					{{>profileDisplay}}
+	  				</div>
+	  			</div>
+	  			
+	  			<!--pagination-->
+	  			<nav>
+				  <ul class="pager">
+				    <li><a href="#">Previous</a></li>
+				    <li><a href="#">Next</a></li>
+				  </ul>
+				</nav>
+	  		</div>
+ 		</div>
+ 		
+ 		<!--VERTICAL NAVBAR-->
   		<div>
   			
   		</div>
@@ -38,10 +73,39 @@
 	
 	<!--PROFILE DISPLAY TEMPLATE-->
 <template name="profileDisplay">
-	<div class="col-md-6">
+	<!--will use a button; that way user can click on profile to go to profile page-->
+	<!--which profile page? fb? our app's?-->
+	<div class="row">
+		<div class="col-md-2">
+			<a href="#" class="thumbnail">
+				<!--insert image here-->
+				<!--*****************-->
+				<img src="http://cdn.photoaffections.com/images/icon-profile.png" alt="Profile Pic">
+		    	</a>
+		</div>
+		<!--info-->
+		<div class="col-md-10">
 			<!--name-->
-			<!--avatar-->
+			<h1>Name</h1>
+			
 			<!--bio-->
+			<p>
+				Literally lumbersexual stumptown vinyl messenger bag, XOXO Kickstarter lo-fi.
+				Lumbersexual mlkshk readymade 3 wolf moon, seitan Bushwick heirloom aesthetic normcore gastropub.
+				You probably haven't heard of them brunch Williamsburg hashtag iPhone Marfa, cardigan McSweeney's Brooklyn biodiesel cred beard.
+			</p>
 			<!--interests-->
+			{{>interestDisplay}}
+		</div>
 	</div>
+
+	<!--chat button-->
+	<div class="btn btn-default" aria-label="Chat!" id="profileDisplayChat">
+		<span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+	</div>
+</template>
+
+<!--Interests Template-->
+<template name="interestDisplay">
+	<span class="label label-default">Interest</span>
 </template>
