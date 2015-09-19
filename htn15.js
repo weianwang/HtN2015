@@ -15,9 +15,8 @@ if (Meteor.isClient) {
             }
         })
     }
-});
+  });
+  
+Meteor.subscribe("userData");
 }
 
-if (Meteor.isServer) {
-  
-}
