@@ -8,13 +8,19 @@
 </body>
 
 <template name="login">
+    {{#if currentUser}}
+        {{currentUser.services.facebook.name}} -
+        {{currentUser.services.facebook.gender}}
+        <button id="logout">Logout</button>
+    {{else}}
+        <button id="facebook-login" class="btn btn-default"> Login with Facebook</button>
+    {{/if}}
 </template>
 
 <template name="introduction">
-	I'm looking for someone to explore 
+	I want to explore
 	<form> 
 		<input type="text" name="user-interests">
 		<input type="submit" name="Go">
 	</form>
-	with me.
 </template>
