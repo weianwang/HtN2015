@@ -4,7 +4,7 @@
 
 <body>
 	<h1> NESTEA </h1>
-  	{{> introduction}}
+	{{> login}}
 </body>
 
 <template name="login">
@@ -15,12 +15,4 @@
     {{else}}
         <button id="facebook-login" class="btn btn-default"> Login with Facebook</button>
     {{/if}}
-</template>
-
-<template name="introduction">
-	I want to explore
-	<form> 
-		<input type="text" name="user-interests">
-		<input type="submit" name="Go">
-	</form>
 </template>
