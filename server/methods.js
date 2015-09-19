@@ -8,11 +8,9 @@ Meteor.methods({
 				bio: bio
 			}}
 			);
-	}
-	/*
+	}, 
+
 	addInterest: function(userId, interestId) {
-		Profiles.update(
-		);
+		Profiles.update( {userId: userId}, {interest: interestId.split(',')});
 	}
-	*/
 });
