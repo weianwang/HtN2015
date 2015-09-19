@@ -3,16 +3,42 @@
 </head>
 
 <body>
-	<h1> NESTEA </h1>
+	<!--PAGE LAYOUT-->
+		<!--CONTAINER-FLUID-->
+	<div class="container-fluid" id="Intro">
+  		<!--INTRODUCTION DIV-->
+  		<div class="col-md-12">
+  			{{> introduction}}
+  		</div>
+  		
+  		<!--APP PAGE DIV-->
+  		<div class="col-md-12">
+  			
+  			<!--pagination-->
+  			<nav>
+			  <ul class="pager">
+			    <li><a href="#">Previous</a></li>
+			    <li><a href="#">Next</a></li>
+			  </ul>
+			</nav>
+  		</div>
+  		
+  		<!--VERTICAL NAVBAR-->
+  		<div>
+  			
+  		</div>
+	</div>
 	{{> login}}
 </body>
 
-<template name="login">
-    {{#if currentUser}}
-        {{currentUser.services.facebook.name}} -
-        {{currentUser.services.facebook.gender}}
-        <button id="logout">Logout</button>
-    {{else}}
-        <button id="facebook-login" class="btn btn-default"> Login with Facebook</button>
-    {{/if}}
+<!--TEMPLATES-->
+	
+	<!--PROFILE DISPLAY TEMPLATE-->
+<template name="profileDisplay">
+	<div class="col-md-6">
+			<!--name-->
+			<!--avatar-->
+			<!--bio-->
+			<!--interests-->
+	</div>
 </template>
