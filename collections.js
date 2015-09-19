@@ -1,4 +1,4 @@
-Profiles = new Mongo.collection("profiles");
+Profiles = new Mongo.Collection("profiles");
 // FIELD:
 // userId
 // firstname
