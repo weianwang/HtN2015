@@ -31,12 +31,11 @@ Template.editProfile.events({
 		var firstname = $('[name="firstname"]').val();
 		var lastname = $('[name="lastname"]').val();
 
-		Profiles.update( { {userId: user_id}, $set: {
+		Profiles.update({userId: user_id}, {$set: {
 			firstname: $('[name="firstname"]').val(),
 			lastname: $('[name="lastname"]').val(),
 			zipcode: $('[name="zipcode"]').val(),
-			bio: $('[name="bio"]').val()
-		}
+			bio: $('[name="bio"]').val() }
 		});
 	}
 });
