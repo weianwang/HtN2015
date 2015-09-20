@@ -1,7 +1,7 @@
-Template.database.onCreated(function ()){
+Template.database.onCreated(function (){
 	this.subscribe('Profiles');
 	console.log('Database initiated');
-}
+});
 
 Template.database.helpers({
 	'getCurrentUser' : function(){
@@ -11,14 +11,14 @@ Template.database.helpers({
 	'getUserInterests' : function (){
 		return getCurrentUser.interests;
 	},
-hether 
+
 	'getUserName' : function(){
 		return getCurrentUser.firstname + getCurrentUser.lastname;
 	}
 });
 
 Template.database.events({
-	
+
 });
 
 // we want to take zipcode data of each person and use zipcode and/or google maps api to determine who is in the radius
