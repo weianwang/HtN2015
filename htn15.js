@@ -1,14 +1,14 @@
 // PROFILE DISPLAY
-Template.profileDisplay.helpers({
+Template.profileHolder.helpers({
     user: function() {
         return Profiles.find();
     }
 });
 
 // INTERESTS
-Template.interests_name_user.helpers({
+Template.interestNavBar.helpers({
     interests: function() {
-        return Profiles.findOne({userID: Meteor.userID()}).fetch({'interests'});
+        return Profiles.findOne({userID: Meteor.userID()}).interests;
     }
 });
 
