@@ -1,7 +1,7 @@
 Template.database.onCreated(function (){
 	this.subscribe('Profiles');
 	console.log('Database initiated');
-});
+;
 
 Template.database.helpers({
 	'getCurrentUser' : function(){
