@@ -4,30 +4,31 @@
 
 <body>
 	<!--PAGE LAYOUT-->
-		<!--CONTAINER-FLUID-->
-	<div class="container-fluid" id="Intro">
-  		<!--INTRODUCTION DIV-->
-  		<div class="jumbotron">
-  			<div class="col-md-12">
-  				{{> introduction}}
-	  		</div>
-   		</div>
+			
+			<!--CONTAINER-FLUID-->
+			<div class="container-fluid" id="Intro">
+  				<!--INTRODUCTION DIV-->
+  			<div class="jumbotron">
+  				<div class="col-md-12">
+  					{{> introduction}}
+	  			</div>
+   			</div>
   		
-  		<!--APP PAGE DIV-->
-  		<div class="row">
-  			<!--VERTICAL NAVBAR-->
-  			<div class="col-md-2">
-<nav class="navbar navbar-default" role="navigation">
-				  <!-- Brand and toggle get grouped for better mobile display -->
-				  <div class="navbar-header">
-				    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-				      <span class="sr-only">Toggle navigation</span>
-				      <span class="icon-bar"></span>
-				      <span class="icon-bar"></span>
-				      <span class="icon-bar"></span>
-				    </button>
-				    <a class="navbar-brand" href="#">Brand</a>
-				  </div>
+  			<!--APP PAGE DIV-->
+  			<div class="row">
+  				<!--VERTICAL NAVBAR-->
+  				<div class="col-md-2">
+					<nav class="navbar navbar-default" role="navigation">
+				  	<!-- Brand and toggle get grouped for better mobile display -->
+				  		<div class="navbar-header">
+				    		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				      			<span class="sr-only">Toggle navigation</span>
+				      			<span class="icon-bar"></span>
+				      			<span class="icon-bar"></span>
+				      			<span class="icon-bar"></span>
+				    		</button>
+				   		<a class="navbar-brand" href="#">Brand</a>
+				  	</div>
 				
 				  <!-- Collect the nav links, forms, and other content for toggling -->
 			  <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -59,14 +60,8 @@
 				</nav>
 	  		</div>
  		</div>
- 		
- 		<!--VERTICAL NAVBAR-->
-  		<div>
-  			
-  		</div>
 	</div>
 	{{> login}}
-	{{> editProfile}}
 </body>
 
 <!--TEMPLATES-->
@@ -95,7 +90,7 @@
 				You probably haven't heard of them brunch Williamsburg hashtag iPhone Marfa, cardigan McSweeney's Brooklyn biodiesel cred beard.
 			</p>
 			<!--interests-->
-			{{>interestDisplay}}
+			{{> interestDisplay}}
 		</div>
 	</div>
 

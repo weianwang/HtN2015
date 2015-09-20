@@ -1,5 +1,5 @@
 Template.profile.onCreated(function () {
-    this.subscribe('profiles');
+    this.subscribe('Profiles');
     console.log('subscribed to profiles!');
  });
 

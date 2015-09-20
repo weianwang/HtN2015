@@ -10,3 +10,5 @@ accounts-facebook
 service-configuration
 utilities:avatar
 bootstrap
+twbs:bootstrap
+iron:router
