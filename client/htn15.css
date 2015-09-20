@@ -1,4 +1,5 @@
 /* CSS declarations go here */
+
 #bg {
   position: fixed; 
   top: -50%; 
@@ -73,4 +74,28 @@
 .navbar-collapse .navbar-nav.navbar-right:last-child {
     margin-right: 0;
 }
+}
+
+#homelink {
+  color: black;
+  font-size: 1.5em;
+}
+
+.nav-link {
+  font-size: .7em;
+}
+
+.intro-container {
+  background-color: #FF5722;
+  width: 100% !important;
+  padding: 80px 40px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  color: white;
+  text-align: center !important;
+}
+
+.login-container {
+  text-align: center !important;
+  margin: 30px;
 }

@@ -1,5 +1,5 @@
 <head>
-  <title> Hack The North 2015 </title>
+  <title> SparkMe </title>
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 
@@ -7,12 +7,37 @@
 <body>
 	<!--PAGE LAYOUT-->
 			
-			<!--CONTAINER-FLUID-->
+      <!--CONTAINER-FLUID-->
+  <div class="container-fluid" id="Nav">
+      <h1>
+        <a href="{{pathFor route='home'}}" id="homelink">SparkMe</a>
+        <!--Random Interest-->
+        <span>
+          {{#if currentUser}}
+          <button class="btn btn-link btn-lg">
+            <a href="{{pathFor route='interestSearch'}}" class="nav-link">Find Interests</a> 
+          </button> 
+          <button class="btn btn-link btn-lg">
+            <a href="{{pathFor route='editProfile'}}" class="nav-link">Edit Profile</a> 
+          </button>
+          <button class="btn btn-link btn-lg">
+            <a href="#" class="nav-link">Logout</a> 
+          </button> 
+          {{else}}
+          <!--
+          <a href="{{pathFor route='login'}}" class="nav-link">Sign Up / Login </a>
+        -->
+          {{/if}}
+          
+        </span>
+      </h1>      
+  </div>
 
-      <div class="container-fluid" id="Intro">
+
+      <div class="container-fluid intro-container" id="Intro">
 
   				<!--INTRODUCTION DIV-->
-  			<div class="jumbotron">
+  			<div>
   				<div class="col-md-12">
   					{{> introduction}}
 	  			</div>
@@ -21,6 +46,7 @@
 
 	</div>
 	{{> yield}}
+
 </body>
 </template>
 

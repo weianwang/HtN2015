@@ -1,13 +1,16 @@
 <!--LOGIN-->
 <template name="login">
+	<div class="login-container">
     {{#if currentUser}}
-        {{currentUser.services.facebook.name}}
+        Hello, {{currentUser.services.facebook.name}}
         {{> avatar user=currentUser shape="rounded"}}
         <button id="logout">Logout</button>
     {{else}}
     	<button id="facebook-signup" class="btn btn-default"> Sign Up With Facebook </button>
         <button id="facebook-login" class="btn btn-default"> Login with Facebook</button>
     {{/if}}
+
+	</div>
 </template>
 
 

@@ -31,7 +31,7 @@ Router.route (
 	'/interest-search', 
 	{
 		name: 'interestSearch',
-		template: 'interestSearch'
+		template: 'interestNavBar'
 	}
 );
 
