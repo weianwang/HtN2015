@@ -15,9 +15,16 @@ Meteor.methods({
 	},
 
 	//FOR API TESTING ATM
+	/*
 	getZipcode: function() {
 		this.unblock();
 		var api_key = "irg6RlPQd2hCpkihXL0lish6cEHKTydcZtjRP8H2bYEAiXRgJSB1kT8xxPhrouDn";
 		return Meteor.http.call("GET", "https://www.zipcodeapi.com/rest/" + api_key + "/radius.json/48104/10/km");
+	},
+	*/
+	getDistanceBetweenZips: function(zip1, zip2) {
+		this.unblock();
+		var api_key = "irg6RlPQd2hCpkihXL0lish6cEHKTydcZtjRP8H2bYEAiXRgJSB1kT8xxPhrouDn";
+		return Meteor.http.call("GET", "https://www.zipcodeapi.com/rest/" + api_key + "/distance.json/" + zip1 + "/" + zip2 + "/mile");
 	}
 });
