@@ -13,3 +13,4 @@ bootstrap
 twbs:bootstrap
 iron:router
 jaymc:chat
+simple:reactive-method
