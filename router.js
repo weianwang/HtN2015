@@ -34,3 +34,12 @@ Router.route (
 		template: 'interestSearch'
 	}
 );
+
+Router.route (
+	'/api-test', 
+	{
+		name: 'apiTest',
+		template: 'apiTest'
+	}
+);
+
