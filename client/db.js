@@ -1,7 +1,7 @@
-Template.database.onCreated(function ()){
+Template.database.onCreated(function (){
 	this.subscribe('Profiles');
 	console.log('Database initiated');
-}
+});
 
 Template.database.helpers({
 	'getCurrentUser' : function(){
@@ -11,7 +11,7 @@ Template.database.helpers({
 	'getUserInterests' : function (){
 		return getCurrentUser.interests;
 	},
-hether 
+
 	'getUserName' : function(){
 		return getCurrentUser.firstname + getCurrentUser.lastname;
 	}
