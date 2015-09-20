@@ -2,6 +2,7 @@
   <title> NESTEA </title>
 </head>
 
+<template name="htn15">
 <body>
 	<!--PAGE LAYOUT-->
 			
@@ -14,57 +15,63 @@
 	  			</div>
    			</div>
   		
-  			<!--APP PAGE DIV-->
-  			<div class="row">
-  				<!--VERTICAL NAVBAR-->
-  				<div class="col-md-2">
-					<nav class="navbar navbar-default" role="navigation">
-				  	<!-- Brand and toggle get grouped for better mobile display -->
-				  		<div class="navbar-header">
-				    		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-				      			<span class="sr-only">Toggle navigation</span>
-				      			<span class="icon-bar"></span>
-				      			<span class="icon-bar"></span>
-				      			<span class="icon-bar"></span>
-				    		</button>
-				   		<a class="navbar-brand" href="#">Brand</a>
-				  	</div>
-				
-				  <!-- Collect the nav links, forms, and other content for toggling -->
-			  <div class="collapse navbar-collapse navbar-ex1-collapse">
-				    <ul class="nav navbar-nav">
-				      <li class="active"><a href="#">Link</a></li>
-				      <li><a href="#">Link</a></li>
-				    </ul>
-				  </div><!-- /.navbar-collapse -->
-				</nav>
-	  		</div>
-  			<!--Profile Section-->
-  			<div class="col-md-10">
-	  			<!--profiles-->
-	  			<div class="row">
-	  				<div class="col-md-5">
-	  					{{>profileDisplay}}
-	  				</div>
-	  				<div class="col-md-5">
-	  					{{>profileDisplay}}
-	  				</div>
-	  			</div>
-	  			
-	  			<!--pagination-->
-	  			<nav>
-				  <ul class="pager">
-				    <li><a href="#">Previous</a></li>
-				    <li><a href="#">Next</a></li>
-				  </ul>
-				</nav>
-	  		</div>
- 		</div>
+
 	</div>
-	{{> login}}
+	{{> yield}}
 </body>
+</template>
 
 <!--TEMPLATES-->
+
+<template name="interestSearch">
+                <!--APP PAGE DIV-->
+            <div class="row">
+                <!--VERTICAL NAVBAR-->
+                <div class="col-md-2">
+                    <nav class="navbar navbar-default" role="navigation">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        <a class="navbar-brand" href="#">Brand</a>
+                    </div>
+                
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                      <li class="active"><a href="#">Link</a></li>
+                      <li><a href="#">Link</a></li>
+                    </ul>
+                  </div><!-- /.navbar-collapse -->
+                </nav>
+            </div>
+            <!--Profile Section-->
+            <div class="col-md-10">
+                <!--profiles-->
+                <div class="row">
+                    <div class="col-md-5">
+                        {{>profileDisplay}}
+                    </div>
+                    <div class="col-md-5">
+                        {{>profileDisplay}}
+                    </div>
+                </div>
+                
+                <!--pagination-->
+                <nav>
+                  <ul class="pager">
+                    <li><a href="#">Previous</a></li>
+                    <li><a href="#">Next</a></li>
+                  </ul>
+                </nav>
+            </div>
+        </div>
+
+</template>
 	
 	<!--PROFILE DISPLAY TEMPLATE-->
 <template name="profileDisplay">
