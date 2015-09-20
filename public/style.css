@@ -1,0 +1,27 @@
+html { 
+  background: url(/images/bridge.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.intro-text {
+  position: absolute;
+  width: 100%;
+  top: 33%;
+  left: 0;
+  text-align: center;
+  -webkit-transform: translate(0%, -50%);
+     -moz-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+     -o-transform: translate(0%, -50%);
+      transform: translate(0%, -50%);
+  padding: 0 15px;
+}
+
+.intro-text h1{
+    font-weight: 900;
+    font-family: 
+    font-color: white;
+}

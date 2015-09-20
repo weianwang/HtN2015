@@ -17,8 +17,5 @@ Template.database.helpers({
 	}
 });
 
-Template.database.events({
-
-});
 
 // we want to take zipcode data of each person and use zipcode and/or google maps api to determine who is in the radius
